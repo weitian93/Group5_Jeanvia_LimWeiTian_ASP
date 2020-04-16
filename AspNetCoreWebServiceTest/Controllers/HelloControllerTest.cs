@@ -10,7 +10,8 @@ namespace AspNetCoreWebServiceTest.Controllers
         {
             HelloController controller = new HelloController();
             var response = controller.Get().Value as Response;
-            Assert.Equal("Hello World!!!!!!!!!!!!!!!!!", "Not the same");
+            Assert.Equal("Hello World!!!!!!!!!!!!!!!!!", response.Output);
+            assertFalse("fail",false);
         }
 
         [Theory]
